@@ -1,0 +1,59 @@
+body {
+    overflow-x: hidden;
+    font-weight: 300 !important;
+}
+
+h1 {
+    color: #000000;
+}
+
+p {
+    color: #212121;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
+
+.navbar-default {
+    background-color: white !important;
+    border-color: #e4e4e4;
+}
+
+.btn {
+    border-radius: 0px !important;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: transparent;
+    border-top: none;
+    z-index: 10;
+}
+
+.footer-section {
+    height: 50px;
+}
+
+.item {
+    overflow: hidden;
+    width: auto;
+    max-height: 320px;
+}
+
+.item img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.item:hover img {
+    -moz-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+}

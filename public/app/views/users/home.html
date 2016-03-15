@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <input ng-model="model.area" style="background:#f2f2f2;color:#2c2c2c" type="text" id="place" class="form-control top-buffer" placeholder="Enter your location" autocomplete="off" />
+                <small>We are currently serving in Anandpuri, West Boring Canal Road and Mahendru region only</small>
+            </div>
+        </div>
+        <div class="row" style="margin-top:6px;">
+            <div class="col-md-6">
+                <button class="btn btn-danger btn-block">LUNCH FOR TODAY</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-default btn-block">DINNER FOR TODAY</button>
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="{{item.link}}">
+                            <figure class="explore item">
+                                <img src="/images/item1.jpg" class="img-responsive" />
+                                <figcaption>
+                                    <div class="reveal">
+                                        <a href="{{item.link}}"><h4>{{item.description}}</h4></a>
+                                        <!--<h5>{{item.link}}</h5>-->
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <p>This is Dish 1</p>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <button class="btn btn-sm" >-</button>
+                        <button class="btn btn-sm" >+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="{{item.link}}">
+                            <figure class="explore item">
+                                <img src="/images/item2.jpg" class="img-responsive" />
+                                <figcaption>
+                                    <div class="reveal">
+                                        <a href="{{item.link}}"><h4>{{item.description}}</h4></a>
+                                        <!--<h5>{{item.link}}</h5>-->
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <p>This is Dish 2</p>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <button class="btn btn-sm">-</button>
+                        <button class="btn btn-sm">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="row">
+        <div class="col-md-4 footer-section" style="background:#CE3529">
+        </div>
+        <div class="col-md-4 footer-section" style="background:#CE3529">
+        </div>
+        <div class="col-md-4 footer-section" style="background:#3B4752">
+        </div>
+    </div>
+</footer>

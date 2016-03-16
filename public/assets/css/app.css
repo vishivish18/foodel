@@ -22,6 +22,7 @@ p {
 
 .btn {
     border-radius: 0px !important;
+    outline: none !important;
 }
 
 footer {
@@ -56,4 +57,44 @@ footer {
     -moz-transform: scale(1.04);
     -webkit-transform: scale(1.04);
     transform: scale(1.04);
+}
+
+.location-text {
+    background: #f2f2f2;
+    color: #2c2c2c
+}
+
+.location-message {}
+
+.filter-buttons-container {
+    margin-top: 10px;
+}
+
+.left-content {
+    padding-right: 5px !important;
+}
+
+.right-content {
+    padding-left: 5px !important;
+}
+
+.action-button-container {
+    margin-top: 10px;
+}
+
+.action-button {
+    background: none;
+    border-radius: 50% !important;
+    border: 1px solid orange;
+}
+
+.action-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.total-text {
+    color: white;
+    margin: 15px;
+    font-size: 18px;
 }

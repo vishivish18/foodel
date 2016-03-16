@@ -2,20 +2,20 @@
     <div class="col-md-offset-2 col-md-8">
         <div class="row">
             <div class="col-md-12">
-                <input ng-model="model.area" style="background:#f2f2f2;color:#2c2c2c" type="text" id="place" class="form-control top-buffer" placeholder="Enter your location" autocomplete="off" />
-                <small>We are currently serving in Anandpuri, West Boring Canal Road and Mahendru region only</small>
+                <input ng-model="model.area" type="text" id="place" class="form-control top-buffer location-text" placeholder="Enter your location" autocomplete="off" />
+                <small class="location-message">We are currently serving in Anandpuri, West Boring Canal Road and Mahendru region only</small>
             </div>
         </div>
-        <div class="row" style="margin-top:6px;">
-            <div class="col-md-6">
+        <div class="row filter-buttons-container">
+            <div class="col-md-6 left-content">
                 <button class="btn btn-danger btn-block">LUNCH FOR TODAY</button>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 right-content">
                 <button class="btn btn-default btn-block">DINNER FOR TODAY</button>
             </div>
         </div>
         <div class="row top-buffer">
-            <div class="col-md-6">
+            <div class="col-md-6 left-content">
                 <div class="row">
                     <div class="col-md-12">
                         <a href="{{item.link}}">
@@ -24,22 +24,24 @@
                                 <figcaption>
                                     <div class="reveal">
                                         <a href="{{item.link}}"><h4>{{item.description}}</h4></a>
-                                        <!--<h5>{{item.link}}</h5>-->
                                     </div>
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
+                </div>
+                <div class="row action-button-container">
                     <div class="col-md-8">
                         <p>This is Dish 1</p>
                     </div>
                     <div class="col-md-4 text-right">
-                        <button class="btn btn-sm" >-</button>
-                        <button class="btn btn-sm" >+</button>
+                        <button ng-click="removeItem(1)" class="btn btn-sm action-button">-</button>
+                        <span>{{model.qitem1}}</span>
+                        <button ng-click="addItem(1)" class="btn btn-sm action-button">+</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 right-content">
                 <div class="row">
                     <div class="col-md-12">
                         <a href="{{item.link}}">
@@ -47,32 +49,35 @@
                                 <img src="/images/item2.jpg" class="img-responsive" />
                                 <figcaption>
                                     <div class="reveal">
-                                        <a href="{{item.link}}"><h4>{{item.description}}</h4></a>
-                                        <!--<h5>{{item.link}}</h5>-->
+                                        <a href="{{item.link}}"><h4>{{item.description}}</h4></a                                        
                                     </div>
                                 </figcaption>
                             </figure>
                         </a>
+                                    </div>
                     </div>
-                    <div class="col-md-8">
-                        <p>This is Dish 2</p>
-                    </div>
-                    <div class="col-md-4 text-right">
-                        <button class="btn btn-sm">-</button>
-                        <button class="btn btn-sm">+</button>
+                    <div class="row action-button-container">
+                        <div class="col-md-8">
+                            <p>This is Dish 2</p>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <button ng-click="removeItem(2)" class="btn btn-sm action-button">-</button>
+                            <span>{{model.qitem2}}</span>
+                            <button ng-click="addItem(2)" class="btn btn-sm action-button">+</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<footer>
-    <div class="row">
-        <div class="col-md-4 footer-section" style="background:#CE3529">
+    <footer ng-if="model.qitem1 || model.qitem2">
+        <div class="row">
+            <div class="col-md-4 footer-section" style="background:#CE3529">
+                <p class="total-text">Total items: {{model.qitem1 + model.qitem2}}</p>
+            </div>
+            <div class="col-md-4 footer-section" style="background:#CE3529">
+            </div>
+            <div class="col-md-4 footer-section" style="background:#3B4752">
+            </div>
         </div>
-        <div class="col-md-4 footer-section" style="background:#CE3529">
-        </div>
-        <div class="col-md-4 footer-section" style="background:#3B4752">
-        </div>
-    </div>
-</footer>
+    </footer>

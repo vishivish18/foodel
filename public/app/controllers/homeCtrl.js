@@ -77,6 +77,46 @@ angular.module('app')
 
         }
 
+
+        $scope.model.qitem1 = 0;
+        $scope.model.qitem2 = 0;
+
+        $scope.addItem = function(dish) {
+            if (dish == 1) {
+
+                if ($scope.model.qitem1 == 8) {
+                    alert("Maximum limit reached");
+                    return
+                }
+                $scope.model.qitem1++;
+            } else if (dish == 2) {
+                if ($scope.model.qitem2 == 8) {
+                    alert("Maximum limit reached");
+                    return
+                }
+                $scope.model.qitem2++;
+            }
+        }
+
+
+        $scope.removeItem = function(dish) {
+            if (dish == 1) {
+
+                if ($scope.model.qitem1 == 0) {
+                    alert("You have not added this item to cart");
+                    return
+                }
+                $scope.model.qitem1--;
+            } else if (dish == 2) {
+                if ($scope.model.qitem2 == 0) {
+                    alert("You have not added this item to cart");
+                    return
+                }
+                $scope.model.qitem2--;
+            }
+
+        }
+
         $scope.markonGoogleMap();
 
 
